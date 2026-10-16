@@ -1,0 +1,14 @@
+GOI Y KIEM THU THEO DE
+
+Bai 1: java Main localhost "https://example.com:443/path?a=1#top"; thu URI sai va hostname sai.
+Bai 2: gui 0, 9, dong rong, 10, a, chuoi co khoang trang. Du lieu sai tra ERR INVALID_DIGIT.
+Bai 3: thu DATE, TIME, DATETIME; TCP co QUIT, UDP moi lenh la mot datagram.
+Bai 4: CALC + 100 200; CALC / 10 0; CALC % 10 3; CALC + a 2; CALC + 1.
+Bai 5: mo server, mo it nhat 3 client voi nickname khac nhau; thu USERS, MSG xin chao, QUIT va tat dot ngot mot client.
+Bai 6: chay server, sau do client; ghi 5 dong ket qua va moi truong may.
+Bai 7: chay server, gui HELLO cuong01 va vai tin nhan; kiem tra data_logs/cuong01.txt.
+Bai 8: tao file text nho de thu. Thu file rong, file van ban, file anh va ten co ../. Server tu choi ten file co ky tu khong hop le.
+Bai 9 TCP: mo server, mo nhieu client, nhap thong bao tren cua so server. UDP: mo receiver truoc roi chay sender; multicast phu thuoc giao dien mang.
+Bai 10: chay server; chay client localhost; client nhan SERVICE va phan hoi OK PONG.
+
+Bai 1 khong phu thuoc TCP/UDP, nen hai folder co cung chuong trinh host/URI inspector. Cac bai khac co ban rieng trong folder TCP va UDP.

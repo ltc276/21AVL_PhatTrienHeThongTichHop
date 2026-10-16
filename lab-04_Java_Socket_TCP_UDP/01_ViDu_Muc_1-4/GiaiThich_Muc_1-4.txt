@@ -1,0 +1,50 @@
+GIAI THICH DON GIAN CAC MUC 1 DEN 4
+
+MUC 1 - MUC TIEU
+- Socket giup chuong trinh tren hai may trao doi du lieu.
+- Client la ben gui yeu cau. Server la ben cho yeu cau va tra ket qua.
+- TCP co ket noi, du lieu di theo thu tu. UDP gui tung goi datagram, co the mat goi.
+
+MUC 2 - CAC DIEU CHINH
+- Vi du dung cong 5000 cho TCP va 5001 cho UDP, tranh dung cong dich vu he thong.
+- Dung UTF-8 de tieng Viet khong bi loi ma hoa.
+- Try-with-resources tu dong dong socket va luong sau khi ket thuc.
+- UDP can timeout de client khong cho mai neu server khong tra loi.
+
+MUC 3 - KIEN THUC NEN
+- IP/hostname: dia chi may dich, vi du localhost hoac 127.0.0.1.
+- Port: cong cua chuong trinh, vi du 5000.
+- Socket: dau noi de gui/nhan du lieu.
+- Charset UTF-8: chuyen chu thanh byte va nguoc lai.
+- TCP dung ServerSocket va Socket. UDP dung DatagramSocket va DatagramPacket.
+- Vi du giao thuc dong TCP: PING -> OK PONG; TIME -> OK ngay gio; QUIT -> OK BYE.
+
+MUC 4.1 - HOST INSPECTOR
+- InetAddress.getAllByName(host) lay cac dia chi IP cua host.
+- isLoopbackAddress() cho biet dia chi quay ve may hien tai.
+- isSiteLocalAddress() cho biet dia chi mang rieng.
+- Inet4Address la IPv4, Inet6Address la IPv6.
+
+MUC 4.2 - TCP COMMAND
+- Server mo cong 5000 va doi client ket noi.
+- Client gui moi lenh thanh mot dong van ban.
+- readLine() doc mot dong; println() gui mot dong va ket thuc dong.
+- PING, UPPER, TIME, QUIT duoc server xu ly; lenh khac tra loi ERR UNKNOWN_COMMAND.
+
+MUC 4.3 - TCP NHIEU CLIENT
+- ServerSocket.accept() nhan ket noi moi.
+- ExecutorService cung cap thread pool de phuc vu nhieu client.
+- Moi client duoc xu ly boi mot tac vu rieng; thread pool gioi han so luong tac vu chay dong thoi.
+
+MUC 4.4 - UDP REQUEST/RESPONSE
+- Client dong goi chuoi thanh byte roi gui DatagramPacket.
+- Server nhan datagram, xu ly noi dung va gui phan hoi ve dung IP/port nguon.
+- DatagramPacket.getLength() la so byte thuc su nhan.
+- setSoTimeout(3000) giup client thoat sau khoang 3 giay neu khong co phan hoi.
+
+CACH CHAY
+- Mo terminal trong thu muc cua tung vi du.
+- Bien dich: javac *.java
+- Chay server truoc, mo terminal khac chay client.
+- TCP: chay TcpCommandServer hoac MultiClientTcpServer, sau do chay TcpCommandClient.
+- UDP: chay UdpEchoServer, sau do chay UdpEchoClient.
